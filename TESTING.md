@@ -1,7 +1,9 @@
 # Verification
 
-The game was verified in **WebMSX 6.0.8**, using an **NTSC MSX1 at the original
-3.58 MHz CPU clock**. A separate boot check used a **32 KB RAM configuration**.
+The turbo build was verified in **WebMSX 6.0.8**, using an **NTSC MSX1 with an
+8× CPU clock and 1000% simulation speed**. All 18 gameplay checks below passed
+again after the turbo changes. The original build also passed at the native
+3.58 MHz clock and with a **32 KB RAM configuration** before turbo tuning.
 Browser playback was also checked with the actual pinned jsDelivr dependency,
 not only a locally cached emulator. No physical MSX hardware was available.
 
@@ -14,7 +16,7 @@ then resumed the same BASIC code and used the MSX keyboard inputs.
 | Check | Result |
 | --- | --- |
 | Disk BASIC loads AUTOEXEC.BAS and the full game | Passed |
-| Gameplay CPU returns to its original clock | Passed |
+| Gameplay CPU keeps its 8× turbo clock | Passed |
 | Sprite 0 contains the exact requested eight bytes | Passed |
 | Start screen, initial wave, five-point health display | Passed |
 | Natural enemy spawning from the arena edges | Passed |
@@ -36,6 +38,23 @@ then resumed the same BASIC code and used the MSX keyboard inputs.
 The source validator and disk checks also passed. These checked BASIC line
 numbers, line lengths, jump targets, FAT12 cluster chains, both FAT copies,
 and byte-for-byte agreement between the disk's BASIC file and its source.
+
+The faster rectangle collision tests were checked against the original tile
+checks at all 43,621 integer positions in a 241 × 181 area. Every result matched.
+Enemy movement first tests its combined move, then falls back to sliding along
+each axis when blocked. Fire cooldown, spawning, invulnerability and medkit
+lifetime were adjusted for faster play.
+
+Five-second headless-browser benchmarks measured the following BASIC update
+rates. The busy fixture used six zombies, invulnerability and held fire. These
+measurements are specific to the test host; actual speed varies by browser and
+device. The BASIC timer targets about 30 updates per second when the emulator
+can keep up; this is not a promise of a fixed frame rate.
+
+| Scene | Original native clock | Turbo build |
+| --- | ---: | ---: |
+| Empty arena | 3.0 updates/s | 12.0 updates/s |
+| Six zombies and held fire | 0.4 updates/s | 10.0 updates/s |
 
 All project files were published to `Nox1381/MSX-BASIC-SCHOOTING-GAME`.
 The uploaded Git blob hashes were checked against the local files, including

@@ -8,8 +8,12 @@ implemented in JavaScript and no machine-code extension is required.
 
 ## Play
 
-[Play now in WebMSX](https://webmsx.org/?MACHINE=MSX1A&PRESETS=DISK&DISKA_URL=https://raw.githubusercontent.com/Nox1381/MSX-BASIC-SCHOOTING-GAME/main/docs/game/ZOMBIE.DSK&FAST_BOOT=1&Z80_CLOCK_MODE=1&JOYKEYS_MODE=-1&SCREEN_FULLSCREEN_MODE=0&ENVIRONMENT=83)
+[Play now in WebMSX](https://webmsx.org/?MACHINE=MSX1A&PRESETS=DISK&DISKA_URL=https://raw.githubusercontent.com/Nox1381/MSX-BASIC-SCHOOTING-GAME/main/docs/game/ZOMBIE.DSK&FAST_BOOT=1&Z80_CLOCK_MODE=8&SPEED=1000&JOYKEYS_MODE=-1&SCREEN_FULLSCREEN_MODE=0&ENVIRONMENT=83)
 or [download the MSX disk image](docs/game/ZOMBIE.DSK).
+Turbo mode uses an **8× CPU overclock and 1000% simulation speed**.
+The BASIC loop paces play to roughly 30 updates per second when the browser
+can keep up.
+
 This link loads the disk directly from this repository into the official
 WebMSX website. Wait for the title screen, click the emulator for sound,
 then press Space to start.
@@ -140,13 +144,15 @@ After rebuilding, commit and push both the source and generated files.
 | 5300–5730 | Medkits and sprite drawing |
 | 6000–8030 | Game over, restart, pause, HUD, quit |
 | 8200–8830 | Sprites and custom character tiles |
-| 9000–9070 | Obstacle collision checks |
+| 1300–1350 | Fast obstacle collision checks |
 | 9500–9520 | Direction and tile data |
 
-The loop waits until at least six video ticks have elapsed between updates.
-The actual frame rate depends on BASIC execution time and the PAL/NTSC model;
-movement and cooldowns use game updates. The website accelerates ASCII
-loading, then switches to an NTSC MSX1 at its original CPU clock for gameplay.
+The loop waits until at least twenty emulated video ticks have elapsed between updates.
+At the default 1000% simulation speed, this targets about 30 updates per second.
+Actual speed depends on the browser and scene complexity. Movement and
+cooldowns use game updates. The website keeps its 8× CPU overclock during
+gameplay. This build is tuned for browser simulation; on original hardware
+the twenty-tick wait can be reduced for better native speed.
 The emulator's own menus allow different
 machines or CPU speeds for experimentation.
 

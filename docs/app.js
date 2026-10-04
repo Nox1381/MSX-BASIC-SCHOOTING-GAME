@@ -45,9 +45,9 @@ function boot() {
     ENVIRONMENT: 83,
     JOYKEYS_MODE: -1,
     TOUCH_MODE: 0,
-    // Accelerate ASCII program loading; restore the real clock at the title.
+    // Browser turbo. BASIC paces updates at 20 emulated video ticks.
     Z80_CLOCK_MODE: 8,
-    SPEED: 100,
+    SPEED: 1000,
   });
   try {
     document.getElementById("loading")?.remove();
@@ -58,7 +58,7 @@ function boot() {
       attempts++;
       const text = WMSX.room?.machine?.vdp?.getScreenText() || "";
       if (text.includes("PRESS SPACE OR FIRE")) {
-        WMSX.room.machine.setZ80ClockMode(1);
+        WMSX.room.machine.setZ80ClockMode(8);
         statusLine.textContent = "Space to start · Click screen for sound";
         reboot.disabled = false;
         clearInterval(watch);
