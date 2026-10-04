@@ -8,9 +8,11 @@ implemented in JavaScript and no machine-code extension is required.
 
 ## Play
 
-[Play in your browser](https://nox1381.github.io/MSX-BASIC-SCHOOTING-GAME/)
+[Play now in WebMSX](https://webmsx.org/?MACHINE=MSX1A&PRESETS=DISK&DISKA_URL=https://raw.githubusercontent.com/Nox1381/MSX-BASIC-SCHOOTING-GAME/main/docs/game/ZOMBIE.DSK&FAST_BOOT=1&Z80_CLOCK_MODE=1&JOYKEYS_MODE=-1&SCREEN_FULLSCREEN_MODE=0&ENVIRONMENT=83)
 or [download the MSX disk image](docs/game/ZOMBIE.DSK).
-Click the emulator screen for sound, then press Space to start.
+This link loads the disk directly from this repository into the official
+WebMSX website. Wait for the title screen, click the emulator for sound,
+then press Space to start.
 
 | Control | Action |
 | --- | --- |
@@ -75,7 +77,11 @@ The `docs/` directory is a complete static GitHub Pages site. There is no
 backend service, database, or build step required to host it.
 
 The repository is [Nox1381/MSX-BASIC-SCHOOTING-GAME](https://github.com/Nox1381/MSX-BASIC-SCHOOTING-GAME).
-Its Pages address is https://nox1381.github.io/MSX-BASIC-SCHOOTING-GAME/.
+The custom launcher is ready to deploy from **main → /docs** in
+**Settings → Pages → Deploy from a branch**. Pages has not yet been enabled;
+the direct WebMSX link above is already playable.
+Once enabled, the launcher address will be
+https://nox1381.github.io/MSX-BASIC-SCHOOTING-GAME/.
 
 To host your own fork:
 

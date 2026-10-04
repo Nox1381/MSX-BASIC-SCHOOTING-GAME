@@ -37,5 +37,13 @@ The source validator and disk checks also passed. These checked BASIC line
 numbers, line lengths, jump targets, FAT12 cluster chains, both FAT copies,
 and byte-for-byte agreement between the disk's BASIC file and its source.
 
-GitHub repository creation and GitHub Pages deployment have not yet occurred.
-The complete `docs/` site and deployment instructions are ready for that step.
+All project files were published to `Nox1381/MSX-BASIC-SCHOOTING-GAME`.
+The uploaded Git blob hashes were checked against the local files, including
+the disk image and screenshot. The README's direct WebMSX link was checked
+against the live GitHub-hosted disk: the title screen and first wave loaded at
+the original MSX1 CPU clock, with no JavaScript exceptions.
+
+GitHub Pages deployment is pending because secure browser sign-in was
+unavailable. The complete `docs/` launcher is ready to enable from the
+repository's `main` branch and `/docs` folder. The direct play link works
+independently of Pages.
