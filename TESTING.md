@@ -58,9 +58,11 @@ can keep up; this is not a promise of a fixed frame rate.
 
 All project files were published to `Nox1381/MSX-BASIC-SCHOOTING-GAME`.
 The uploaded Git blob hashes were checked against the local files, including
-the disk image and screenshot. The README's direct WebMSX link was checked
-against the live GitHub-hosted disk: the title screen and first wave loaded at
-the original MSX1 CPU clock, with no JavaScript exceptions.
+the disk image and screenshot. The updated README's direct WebMSX link was
+checked against the pinned live disk: the title screen, first wave, movement,
+firing and pause worked with the 8× CPU and 1000% simulation speed, with no
+JavaScript exceptions. The launch link fetches the disk directly through the
+jsDelivr CDN so it does not depend on WebMSX's remote-download proxy.
 
 GitHub Pages deployment is pending because secure browser sign-in was
 unavailable. The complete `docs/` launcher is ready to enable from the
