@@ -8,7 +8,7 @@ implemented in JavaScript and no machine-code extension is required.
 
 ## Play
 
-[Play now in WebMSX](https://webmsx.org/?MACHINE=MSX1A&PRESETS=DISK&DISKA_URL=https://raw.githubusercontent.com/Nox1381/MSX-BASIC-SCHOOTING-GAME/main/docs/game/ZOMBIE.DSK&FAST_BOOT=1&Z80_CLOCK_MODE=8&SPEED=1000&JOYKEYS_MODE=-1&SCREEN_FULLSCREEN_MODE=0&ENVIRONMENT=83)
+[Play now in WebMSX](https://webmsx.org/?MACHINE=MSX1A&PRESETS=DISK&DISKA_URL=https://raw.githubusercontent.com/Nox1381/MSX-BASIC-SCHOOTING-GAME/b59658d1ebe2d4520682b92cc3e065b9413613b5/docs/game/ZOMBIE.DSK&FAST_BOOT=1&Z80_CLOCK_MODE=8&SPEED=1000&JOYKEYS_MODE=-1&SCREEN_FULLSCREEN_MODE=0&ENVIRONMENT=83)
 or [download the MSX disk image](docs/game/ZOMBIE.DSK).
 Turbo mode uses an **8× CPU overclock and 1000% simulation speed**.
 The BASIC loop paces play to roughly 30 updates per second when the browser
