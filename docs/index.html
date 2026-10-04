@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f12">
+  <meta name="description" content="Play Zombie Survivor, an original top-down shooter written in MSX BASIC, in a real MSX emulator.">
+  <title>Zombie Survivor · MSX BASIC</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="cabinet">
+    <header class="masthead">
+      <div><p class="eyebrow">MSX BASIC / 1983 HARDWARE</p><h1>Zombie Survivor</h1></div>
+      <a class="download" href="game/ZOMBIE.BAS" download>Download BASIC</a>
+    </header>
+    <section class="game-frame" aria-label="MSX game emulator">
+      <div class="frame-top"><span>MSX1 · Z80 · 3.58 MHz</span><span id="status" role="status">Loading emulator…</span></div>
+      <div id="wmsx-screen">
+        <div id="loading" class="loading"><p>Booting your MSX</p><p class="muted">The original BASIC game runs inside WebMSX.</p></div>
+      </div>
+      <div id="error" class="error" hidden>
+        <p>The emulator could not load. Check your connection, then retry.</p>
+        <button id="retry" type="button">Retry</button>
+      </div>
+    </section>
+    <div class="under-screen">
+      <p>Press <kbd>Space</kbd> to start. Move with <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd>. Hold <kbd>Space</kbd> to fire.</p>
+      <button id="reboot" type="button" disabled>Reboot MSX</button>
+    </div>
+    <div class="guide">
+      <p><strong>Keep moving.</strong> Shoot in your last movement direction. Green walkers chase you; yellow runners are faster; red armored zombies take three hits. Red crosses restore two health points.</p>
+      <p><kbd>P</kbd> Pause &nbsp; <kbd>Q</kbd> Quit to BASIC. Joystick port 1 also works. On a phone, use WebMSX’s touch controls.</p>
+    </div>
+    <footer>
+      <a href="game/ZOMBIE.DSK" download>Download MSX disk</a>
+      <a href="game/ZOMBIE.BAS">View BASIC source</a>
+      <a href="https://github.com/ppeccin/WebMSX" target="_blank" rel="noopener">Emulator: WebMSX</a>
+      <span>All gameplay is MSX BASIC.</span>
+    </footer>
+  </main>
+</body>
+</html>

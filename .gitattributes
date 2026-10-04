@@ -1,0 +1,3 @@
+game/*.BAS text eol=crlf
+docs/game/*.BAS -text
+*.DSK binary
