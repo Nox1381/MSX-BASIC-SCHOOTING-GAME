@@ -8,13 +8,13 @@ implemented in JavaScript and no machine-code extension is required.
 
 ## Play
 
-[Play now in WebMSX](https://webmsx.org/?MACHINE=MSX1A&PRESETS=DISK&DISKA_URL=https://raw.githubusercontent.com/Nox1381/MSX-BASIC-SCHOOTING-GAME/b59658d1ebe2d4520682b92cc3e065b9413613b5/docs/game/ZOMBIE.DSK&FAST_BOOT=1&Z80_CLOCK_MODE=8&SPEED=1000&JOYKEYS_MODE=-1&SCREEN_FULLSCREEN_MODE=0&ENVIRONMENT=83)
+[Play now in WebMSX](https://webmsx.org/?MACHINE=MSX1A&PRESETS=DISK&DISKA_URL=//cdn.jsdelivr.net/gh/Nox1381/MSX-BASIC-SCHOOTING-GAME@b59658d1ebe2d4520682b92cc3e065b9413613b5/docs/game/ZOMBIE.DSK&AUTO_POWER_ON_DELAY=0&AUTO_START=true&FAST_BOOT=1&Z80_CLOCK_MODE=8&SPEED=1000&JOYKEYS_MODE=-1&SCREEN_FULLSCREEN_MODE=0&ENVIRONMENT=83)
 or [download the MSX disk image](docs/game/ZOMBIE.DSK).
 Turbo mode uses an **8× CPU overclock and 1000% simulation speed**.
 The BASIC loop paces play to roughly 30 updates per second when the browser
 can keep up.
 
-This link loads the disk directly from this repository into the official
+This link loads the pinned disk from this repository through jsDelivr into the official
 WebMSX website. Wait for the title screen, click the emulator for sound,
 then press Space to start.
 
